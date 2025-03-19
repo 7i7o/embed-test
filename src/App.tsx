@@ -44,7 +44,7 @@ function App() {
   }, [iframeMode]);
 
   useEffect(() => {
-    const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const isDark = false; //window.matchMedia("(prefers-color-scheme: dark)").matches;
     document.documentElement.classList.remove("dark", "light");
     document.documentElement.classList.add(isDark ? "dark" : "light");
   }, []);
@@ -62,6 +62,7 @@ function App() {
         label: true,
         wanderLogo: iframeMode === "sidebar" ? "default" : "text-color",
       },
+      src: "https://wander-embed-git-chore-implement-embeded-ba89b9-community-labs.vercel.app",
     });
 
     setInstance(wanderInstance);
